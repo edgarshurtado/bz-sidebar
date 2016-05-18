@@ -1,0 +1,21 @@
+{
+  "name": "bz-sidebar",
+  "authors": [
+    "Edgar S. Hurtado <edsanhu@gmail.com>"
+  ],
+  "description": "a self-scrollable sidebar",
+  "main": "index.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/edgarshurtado/bz-sidebar",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
