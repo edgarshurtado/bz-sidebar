@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Demo app-collection</title>
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../jsUtils/jsonCall.js"></script>
+    <script src="./jsonCall.js"></script>
     <link rel="import" href="../bz-collection.html">
     <style>
 
@@ -27,7 +27,7 @@
 
 
     <script>
-        jsonUtils.jsonRequest("../../../src/test-apps.json", function(response){
+        jsonUtils.jsonRequest("./test-apps.json", function(response){
             document.querySelector("bz-collection").data = response;
         })
     </script>
