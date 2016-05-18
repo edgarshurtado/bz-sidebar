@@ -1,0 +1,185 @@
+[
+    {
+        "name": "Babelomics",
+        "shortDescription": "A program suite for advanced functional genomic data analysis",
+        "launch-link" :  "http://www.babelomics.org/",
+        "links": [
+            {
+                "text": "Source",
+                "faIcon": "fa-github",
+                "link": "https://github.com/babelomics/babelomics"
+            },
+            {
+                "text": "Docs",
+                "faIcon": "fa-file-text-o",
+                "link": "https://github.com/babelomics/babelomics/wiki"
+            },
+            {
+                "text": "Stats",
+                "faIcon": "fa-bar-chart",
+                "link": "http://bioinfo.cipf.es/webstats/babelomics4/awstats.babelomics4.bioinfo.cipf.es.html"
+            }
+        ] ,
+        "citation": "Al-shahrour F, Minguez P, Vaquerizas JM, Conde L, Dopazo J. BABELOMICS: a suite of web tools for functional annotation and analysis of groups of genes in high-throughput experiments. Nucleic Acids Res. 2005;33(Web Server issue):W460-4.",
+        "icon": "http://bioinfo.cipf.es/apps-beta/babelomics/produccion/images/logoBabelomics_negative.svg",
+        "completeDescription": "<p>Babelomics has been running for more than one decade offering a user-friendly interface for the functional analysis of gene expression and genomic data. Here we present its fifth release, which includes support for Next Generation Sequencing data including gene expression (RNA-seq), exome or genome resequencing. Babelomics has simplified its interface, being now more intuitive. Improved visualization options, such as a genome viewer as well as an interactive network viewer, have been implemented. New technical enhancements at both, client and server sides, makes the user experience faster and more dynamic. Babelomics offers user-friendly access to a full range of methods that cover: (i) primary data analysis, (ii) a variety of tests for different experimental designs and (iii) different enrichment and network analysis algorithms for the interpretation of the results of such tests in the proper functional context.</p> <p>Babelomics contains one of the most cited tools in the field of functional enrichment analysis, the FatiGO. See quotation in <a href=\"http://sciencewatch.com/dr/erf/2010/10feberf/10feberfDopa/\" target='_blank'>ScienceWatch</a>.</p>",
+        "publications": [
+            "<p>Al-Shahrour F., Minguez P., Vaquerizas J.M., Conde L., Dopazo J. 2005.&nbsp;<a href='http://nar.oxfordjournals.org/content/33/suppl_2/W460.long' target='_blank'>BABELOMICS: a suite of web tools for functional annotation and analysis of groups of genes in high-throughput experiments</a>. Nucleic Acids Res. 33:W460-W464</p>",
+            "<p class='rtecenter' style='text-align: left;'>Al-Shahrour F., Minguez P., Tarraga J., Montaner D., Alloza E., Vaquerizas J.M., Conde L., Blaschke C., Vera J., Dopazo J. 2006. <a href='http://nar.oxfordjournals.org/content/34/suppl_2/W472.long' target='_blank'>BABELOMICS: a systems biology perspective in the functional annotation of genome-scale experiments</a>. Nucleic Acids Res. 34:W472-W476</p>",
+            "<p class='rtecenter' style='text-align: left;'>Al-Shahrour F, Carbonell J, Minguez P, Goetz S, Conesa A, Tarraga J, Medina I, Alloza E, Montaner D, Dopazo J. &nbsp;2008. <a href='http://nar.oxfordjournals.org/content/36/suppl_2/W341.long' target='_blank'>Babelomics: advanced functional profiling of transcriptomics, proteomics and genomics experiments</a>. Nucleic Acids Res. 36:W341-346</p>",
+            "<p class='rtecenter' style='text-align: left;'>Medina I, Carbonell J, Pulido L, Madeira SC, Goetz S, Conesa A, Tárraga J, Pascual-Montano A, Nogales-Cadenas R, Santoyo J, García F, Marbà M, Montaner D, Dopazo J. 2010 <a href='http://nar.oxfordjournals.org/content/38/suppl_2/W210.full' target='_blank'>Babelomics: an integrative platform for the analysis of transcriptomics, proteomics and genomic data with advanced functional profiling</a>. Nucleic Acids Research. 38:W210-W213.</p>",
+            "<p class='rtecenter' style='text-align: left;'>Alonso R, Salavert F, Garcia-Garcia F, Carbonell-Caballero J, Bleda M, Garcia-Alonso L, Sanchis-Juan A, Perez-Gil D, Marin-Garcia P, Sanchez R, Cubuk C, Hidalgo MR, Amadoz A, Hernansaiz-Ballesteros RD, Alemán A, Tarraga J, Montaner D, Medina I, Dopazo J. 2015. <a href='http://nar.oxfordjournals.org/content/43/W1/W117' target='_blank'>Babelomics 5.0: functional interpretation for new generations of genomic data</a>. Nucleic Acids Res. 43:W117-W121</p>",
+            "<p class='rtecenter' style='text-align: left;'>Al-Shahrour F, Díaz-Uriarte R, and Dopazo J, 2004,&nbsp;<a href='http://bioinformatics.oxfordjournals.org/content/20/4/578.abstract' target='_blank'>FatiGO: a web tool for finding significant associations of Gene Ontology terms with groups of genes</a>. Bioinformatics&nbsp;20(4): 578-580.</p>",
+            "<p class='rtecenter' style='text-align: left;'>Al-Shahrour F, Díaz-Uriarte R, and Dopazo J, 2004,&nbsp;<a href='http://bioinformatics.oxfordjournals.org/content/20/4/578.abstract' target='_blank'>FatiGO: a web tool for finding significant associations of Gene Ontology terms with groups of genes</a>. Bioinformatics&nbsp;20(4): 578-580.</p>",
+            "<p class='rtecenter' style='text-align: left;'>Al-Shahrour F, Minguez P, Tarraga&nbsp;J, Medina I, Alloza E, Montaner D and Dopazo J. 2007.<a href='http://nar.oxfordjournals.org/content/35/suppl_2/W91.long' target='_blank'> FatiGO +: a functional profiling tool for genomic data. Integration of functional annotation, regulatory motifs and interaction data with microarray experiments</a>.&nbsp;Nucl. Acids Res. 35: W91-W96.</p>"
+        ],
+
+        "screenshots": [
+            "./img/Babelomics5.jpg",
+            "https://www.royalcanin.com/~/media/Royal-Canin/Product-Categories/cat-adult-landing-hero.ashx"
+        ],
+
+        "maintained": "true",
+
+        "keywords": ["Pathway"]
+    },
+
+    {
+        "name": "VARIANT",
+        "shortDescription": "Fast and accurate functional characterization of variants in VCF files",
+        "completeDescription": "<p>The massive use of Next Generation Sequencing (NGS) technologies is uncovering an unexpected amount of variability. The functional characterization of such variability, particularly in the most common form of variation found, the Single Nucleotide Variants (SNVs), has become a priority that needs to be addressed in a systematic way. VARIANT (VARIant ANalyis Tool) reports information on the variants found that include consequence type and annotations taken from different databases and repositories (SNPs and variants from dbSNP and 1000 genomes, and disease-related variants from the GWAS catalog, OMIM, COSMIC mutations, etc.) VARIANT also produces a rich variety of annotations that include information on the regulatory (transcription factor or miRNA binding sites, etc.) or structural roles, or on the selective pressures on the sites affected by the variation. This information allows extending the conventional reports beyond the coding regions and expands the knowledge on the contribution of non-coding or synonymous variants to the phenotype studied. Contrarily to other tools, VARIANT uses a remote database and operates through efficient RESTful Web Services that optimize search and transaction operations. In this way, local problems of installation, update or disk size limitations are overcome without the need of sacrifice speed (thousands of variants are processed per minute).</p>",
+        "launch-link": "http://variant.bioinfo.cipf.es/",
+        "links": [
+            {
+                "text": "Docs",
+                "faIcon": "fa-file-text-o",
+                "link": "http://docs.bioinfo.cipf.es/projects/variant/wiki"
+            },
+            {
+                "text": "Tutorial",
+                "faIcon": "fa-gears",
+                "link": "http://docs.bioinfo.cipf.es/projects/variant/wiki/Tutorial"
+            }
+        ],
+        "icon": "",
+        "citation": "Medina I, De maria A, Bleda M, et al. VARIANT: Command Line, Web service and Web interface for fast and accurate functional characterization of variants found by Next-Generation Sequencing. Nucleic Acids Res. 2012;40(Web Server issue):W54-8.",
+        "publications": [
+           "<p>Medina I, De Maria A, Bleda M, Salavert F, Alonso R, Gonzalez CY, Dopazo J. 2012 <a href='http://nar.oxfordjournals.org/content/40/W1/W54.long'>VARIANT: Command Line, Web service and Web interface for fast and accurate functional characterization of variants found by Next-Generation Sequencing</a>. Nucleic Acids Res. 40(Web Server issue):W54-8.</p>"
+        ],
+
+        "screenshots": [
+            "./img/variant.jpg"
+        ],
+
+        "maintained": "false"
+    },
+
+    {
+        "name": "CellBase",
+        "maintained": "true",
+        "icon": "",
+        "shortDescription": "RESTful Web Services for retrieving relevant biological information",
+        "launch-link": "http://docs.bioinfo.cipf.es/projects/cellbase",
+        "completeDescription": "<p>During the last years, the advances in high-throughput technologies have produced an unprecedented growth in the number and size of repositories and databases storing relevant biological data. Today, there is more biological information than ever but, unfortunately, the current status of many of these repositories is far from being optimal. Some of the most common problems are that the information is spread out in many small databases, frequently there are different standards among repositories, some databases are not longer supported or they contain too specific and unconnected information. In addition, data size is increasingly becoming an obstacle when accessing or storing biological data. All these issues make very difficult to extract and integrate information from different sources, to analyze experiments or to access and query this information in a programmatic way. CellBase provides a solution to the growing necessity of integration by easing the access to biological data. CellBase implements a set of RESTful Web services which query a centralized database containing the most relevant biological data sources. The database is hosted in our servers and is regularly updated.&nbsp;</p>",
+        "links": [
+            {
+                "text": "Docs",
+                "faIcon": "fa-file-text-o",
+                "link": "http://docs.bioinfo.cipf.es/projects/cellbase"
+            }
+        ],
+        "citation": "Bleda M, Tarraga J, De maria A, et al. CellBase, a comprehensive collection of RESTful web services for retrieving relevant biological information from heterogeneous sources. Nucleic Acids Res. 2012;40(Web Server issue):W609-14.",
+        "publications": [
+            "<p>Bleda M, Tarraga J, De Maria A, Salavert F, Garcia-Alonso L, Celma M, Martin A, Dopazo J, Medina I. CellBase, a comprehensive collection of RESTful web services for retrieving relevant biological information from heterogeneous sources. Nucleic Acids Res. 40(Web Server issue):W609-W614<p>"
+        ],
+        "keywords": ["Pathway"]
+    },
+
+    {
+        "name": "GenomeMaps",
+        "maintained": "true",
+        "shortDescription": "Our highly efficient next generation genome viewer (used by the ICGC)",
+        "launch-link": "http://www.genomemaps.org/",
+        "icon": "",
+        "completeDescription": "<p>Genome browsers have gained importance as more genomes and related genomic information be-come available. However, the increase of information brought about by new generation sequencing technologies is, at the same time, causing a subtle but continuous decrease in the efficiency of conventional genome browsers. Here we present Genome Maps, a genome browser that implements an innovative model of data transfer and management. The program uses highly efficient technologies from the new HTML5 standard, such as SVG, that optimize workloads at both, server, and client sides and ensure future scalability. Thus, data management and representation are entirely carried out by the browser, without the need of any Java Applet, Flash or other plug-in technology installation. Relevant biological data on genes, transcripts, exons, regulatory features, single nucleotide polymorphisms (SNPs), karyotype, etc., are imported from web services and are available as tracks. In addition, several DAS servers are already included in Genome Maps. As a novelty, this web-based genome browser allows the local upload of huge genomic data files (e.g., VCF or BAM) that can be dynamically visualized in real time at the client side, thus facilitating the management of medical data affected by privacy restrictions. &nbsp;Finally, Genome Maps can easily be integrated into any web application by including only a few lines of code.</p><p>Genome maps is the official genome viewer of the <a href='http://icgc.org/'>ICGC</a> and it is implemented in its analysis portal (<a href='http://dcc.icgc.org/'>http://dcc.icgc.org/</a>)</p>",
+        "links": [
+            {
+                "text": "Source",
+                "faIcon": "fa-github",
+                "link": "https://github.com/opencb/genome-maps"
+            },
+            {
+                "text": "Docs",
+                "faIcon": "fa-file-text-o",
+                "link": "https://github.com/opencb/genome-maps/wiki"
+            }
+        ],
+        "citation":"Medina I, Salavert F, Sanchez R, et al. Genome Maps, a new generation genome browser. Nucleic Acids Res. 2013;41(Web Server issue):W41-6.",
+        "publications": [
+            "Medina I, Salavert F, Sanchez R, et al. <a href='http://nar.oxfordjournals.org/content/41/W1/W41'>Genome Maps, a new generation genome browser</a>. Nucleic Acids Res. 2013;41(Web Server issue):W41-6."
+        ],
+        "screenshots": [],
+        "keywords": ["Genomics", "Proteomics"]
+    },
+
+    {
+        "name": "BiERapp",
+        "shortDescription": "Variant/gene prioritzation tool (from VCF to candidates)",
+        "launch-link": "http://bierapp.babelomics.org/",
+        "icon": "",
+        "keywords": ["Genomics"],
+        "maintained": "true"
+    },
+
+    {
+        "name": "TEAM",
+        "shortDescription": "",
+        "launch-link": "http://team.babelomics.org/",
+        "icon": ""
+    },
+
+    {
+        "name": "RENATO",
+        "shortDescription": "",
+        "launch-link": "http://renato.bioinfo.cipf.es/",
+        "icon": "",
+        "maintained": "true"
+    },
+
+    {
+        "name": "PATHiWays",
+        "shortDescription": "Inferring the functional effect of gene expression changes in signaling pathways",
+        "launch-link": "http://pathiways.babelomics.org/",
+        "icon": "",
+        "maintained": "true",
+        "keywords": ["Pathway", "Genomics", "Proteomics"]
+    },
+    {
+        "name": "PATHiVar",
+        "shortDescription": "Assessing the impact of mutations found in next generation sequencing data over human signaling pathways",
+        "launch-link": "http://pathivar.babelomics.org/",
+        "icon": "http://pathivar.babelomics.org/images/pathiways-logo.svg",
+        "completeDescription": "<p>Modern sequencing technologies produce increasingly detailed data on genomic variation. However, conventional methods for relating either individual variants or mutated genes to phenotypes present known limitations given the complex, multigenic nature of many diseases or traits. Here we present PATHiVar, a web-based tool that integrates genomic variation data with gene expression tissue information. PATHiVar constitutes a new generation of genomic data analysis methods that allow studying variants found in next-generation sequencing experiment in the context of signaling pathways. Simple Boolean models of pathways provide detailed descriptions of the impact of mutations in cell functionality so as, recurrences in functionality failures can easily be related to diseases, even if they are produced by mutations in different genes. Patterns of changes in signal transmission circuits, often unpredictable from individual genes mutated, correspond to patterns of affected functionalities that can be related to complex traits such as disease progression, drug response, etc.&nbsp;</p>",
+        "publications": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra iaculis risus at pulvinar. Sed a venenatis eros. Nullam congue pharetra nibh, in dignissim massa tincidunt vitae. Integer tincidunt auctor nunc eu sodales. Etiam et rhoncus sem. Suspendisse vitae posuere justo. Mauris et ultrices erat. Nulla metus enim, blandit at.",
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pharetra iaculis risus at pulvinar. Sed a venenatis eros. Nullam congue pharetra nibh, in dignissim massa tincidunt vitae. Integer tincidunt auctor nunc eu sodales. Etiam et rhoncus sem. Suspendisse vitae posuere justo. Mauris et ultrices erat. Nulla metus enim, blandit at."
+        ],
+
+        "screenshots": [
+            "./img/PathyVar.jpg"
+        ],
+
+        "background": "",
+
+        "citation": "Al-Shahrour F., Minguez P., Tarraga J., Montaner D., Alloza E., Vaquerizas J.M., Conde L., Blaschke C., Vera J., Dopazo J. 2006. BABELOMICS: a systems biology perspective in the functional annotation of genome-scale experiments. Nucleic Acids Res. 34:W472-W476",
+
+        "maintained": "true"
+    },
+    {
+        "name": "Phylemon",
+        "shortDescription": "Evolution, phylogenetics, phylogenomics",
+        "launch-link": "http://phylemon.bioinfo.cipf.es/",
+        "icon": "http://phylemon.bioinfo.cipf.es/css/phylemon_title.png",
+        "maintained": "false"
+    }
+]

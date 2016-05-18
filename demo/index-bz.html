@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Demo app-collection</title>
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../jsUtils/jsonCall.js"></script>
+    <link rel="import" href="../bz-collection.html">
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        bz-collection {
+            width: 300px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <bz-collection></bz-collection>
+
+
+    <script>
+        jsonUtils.jsonRequest("../../../src/test-apps.json", function(response){
+            document.querySelector("bz-collection").data = response;
+        })
+    </script>
+</div>
+</body>
+</html>

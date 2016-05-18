@@ -1,0 +1,72 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="./bz-wrapper.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
+
+<dom-module id="bz-collection">
+    <template>
+        <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning">
+
+            .scrollbar_hidder {
+                width: inherit;
+                overflow-x: hidden;
+                position: fixed;
+                height: 100vh;
+            }
+
+            .container{
+                background-color: var(--menu-background, #435F7A);
+                width: 100%;
+                padding-right: 40px;
+                height: 100%;
+                z-index: 100;
+                overflow-y: scroll;
+            }
+
+           .bz_wrapper {
+               width: 100%;
+               margin-left: auto;
+               margin-right: auto;
+               display: block;
+           }
+
+        </style>
+        <div class="scrollbar_hidder">
+            <div class="container">
+                <template id="appCollectionDom" is="dom-repeat" items="[[data]]">
+                    <bz-wrapper class="bz_wrapper" title="[[item.name]]" icon-src="[[item.icon]]" on-change-active="_handleActivation"></bz-wrapper>
+                </template>
+            </div>
+        </div>
+    </template>
+    <script>
+        Polymer({
+            is: "bz-collection",
+
+            properties:{
+                data: {
+                    type: Array/Object,
+                    reflectOnAttribute: true
+                },
+                activeObject: {
+                    type:Object,
+                    value: undefined
+                },
+
+                route: Object
+            },
+
+            _handleActivation: function(e){
+                if(this.activeObject !== undefined){
+                    this.activeObject.activated = false;
+                }
+                this.activeObject = Polymer.dom(e).rootTarget;
+                this.set("route.path", "/" + e.target.title.toLocaleLowerCase());
+            },
+
+            setAppActive: function(position) {
+                var app = Polymer.dom(this.root).querySelectorAll("bz-wrapper")[position];
+                app.click();
+            }
+        })
+    </script>
+</dom-module>
