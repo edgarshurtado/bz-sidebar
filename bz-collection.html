@@ -4,6 +4,8 @@
 <!--
     `bz-collection` is a scrollable menu that takes the full height of the port view.
 
+    For its correct function `<bz-collection>` needs to work with `<carbon-route>` to work as a SPA.
+
     ### Styling
     Custom Property | Description | Default Value
     --------------- | ----------- | -------------
@@ -61,24 +63,33 @@
                     type: Array/Object,
                     reflectOnAttribute: true
                 },
+                /**
+                 * Helper property for keep track of which is the current active menu item
+                 * @type Object
+                 */
                 activeObject: {
                     type:Object,
                     value: undefined
                 },
-
+                /**
+                 * Property used as binding to the url route of the application. It receives the route object from
+                 * carboun-route in the element that contains the bz-collection.
+                 *
+                 * @param Object
+                 */
                 route: Object
             },
 
-            setAppActive: function(position) {
-                var app = Polymer.dom(this.root).querySelectorAll("bz-wrapper")[position];
-                app.click();
-            },
-
+            /**
+             * Method to mark a menu item , searching for the title of the app
+             * @param name
+             */
             setAppActiveByName: function(name) {
                 this._searchItemMenuByName(name).click();
             },
 
             /**
+             * Fires every time a menu item is selected
              * @param e event received
              * @private
              */
@@ -91,7 +102,7 @@
             },
 
             /**
-             * Search for the item in the collection that matches the name. (
+             * Searches for the item in the collection that matches its title property to the given name.
              * @param name
              * @returns {T}
              * @private
