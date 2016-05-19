@@ -79,7 +79,23 @@
             setAppActive: function(position) {
                 var app = Polymer.dom(this.root).querySelectorAll("bz-wrapper")[position];
                 app.click();
+            },
+
+            setAppActiveByName: function(name) {
+                this._searchItemMenuByName(name).click();
+
+            },
+
+            _searchItemMenuByName(name){
+                var collection = Polymer.dom(this.root).querySelectorAll("bz-wrapper");
+                var targetElement = Array.prototype.filter.call(collection, function(element){
+                   return element.title.toLowerCase() === name.toLowerCase();
+                })[0];
+
+                return targetElement;
             }
+
+
         })
     </script>
 </dom-module>
