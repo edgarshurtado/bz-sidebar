@@ -2,12 +2,31 @@
 <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
+
+<!--
+    `<bz-wrapper>` is a helper element for the `<bz-sidebar>` element. It provides nice wrappers for displaying
+    a launcher-like menu.
+
+    ### Styling
+
+    Custom property | Description | Default
+    --------------- | ----------- | --------
+    --bz-wrapper-color | Provides the text color the menu items will display | white
+    --sidebar-active-background | The item container background displayed when an element is selected | rgba(160, 197, 255, 0.5)
+    --sidebar-active-border | The container border when the element is selected | rgb(0,143,255) solid 1px
+    --sidebar-hover-background | The background color when the user hover a menu item | rgba(255,255,255, 0.2)
+    --sidebar-hover-border | The border color when the user hover a menu item | rgba(255,255,255, 0.4) solid 1px
+    --iconHolder-background | Icon holder background color | hsla(212, 100%, 60%, 1)
+    --iconHolder-hover-active-background | The icon holder background when the item is selected or hovered | |
+
+-->
+
 <dom-module id="bz-wrapper">
     <template>
         <style>
 
             :host {
-                color: white;
+                color: var(--bz-wrapper-color, white);
             }
 
             .container{
@@ -15,22 +34,23 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
                 width: 100%;
+                /*The size of the box includes its margin */
                 box-sizing: border-box;
                 position: relative;
             }
 
             .container[active]{
-                background-color: rgba(160, 197, 255, 0.5);
-                border: rgb(0,143,255) solid 1px;
+                background-color: var( --sidbar-active-background, rgba(160, 197, 255, 0.5)) ;
+                border: var( --sidebar-active-border, rgb(0,143,255) solid 1px);
             }
 
             .container:hover:not([active]){
-                background-color: rgba(255,255,255, 0.2);
-                border: rgba(255,255,255, 0.4) solid 1px;
+                background-color: var( --sidebar-hover-background, rgba(255,255,255, 0.2));
+                border: var( --sidebar-hover-border, rgba(255,255,255, 0.4) solid 1px);
             }
 
             .container:hover:not([active]) .iconHolder, .container[active] .iconHolder{
-                background-color: hsla(220, 100%, 50%, 1);
+                background-color: var( --iconHolder-hover-active-background);
             }
 
             img, svg {
@@ -39,7 +59,7 @@
 
             .iconHolder{
                 margin-bottom: 10px;
-                background-color: hsla(212, 100%, 60%, 1);
+                background-color: var( --iconHolder-background ,hsla(212, 100%, 60%, 1));
                 border-radius: 15%;
                 position: relative;
                 height: 70px;
@@ -60,9 +80,10 @@
                 text-align: center;
             }
         </style>
-
+        <!-- DOM -->
         <div id="container" class="container">
             <div class="iconHolder">
+                <!-- The image for the bz-wrapper if provided -->
                 <template is="dom-if" if="[[_hasIcon(iconSrc)]]">
                     <img id="iconTag" src="[[iconSrc]]" alt="">
                 </template>
@@ -92,6 +113,7 @@
                             inkscape:connector-curvature="0" /></svg>
                 </template>
             </div>
+            <!-- Name displayed for the app-->
             <div class="app_name_holder">
                 <span id="appName">[[title]]</span>
             </div>
@@ -111,17 +133,31 @@
                 }
             },
 
+            // Element lifecicle
             ready: function(){
                 this.addEventListener("click", function(){this.activated = true}.bind(this));
             },
 
 
+            // Element behaviour
+
+            /**
+             * Helper function for knowing if a icon url has been provided
+             * @param url
+             * @return Boolean
+             */
             _hasIcon: function(url) {
               return url !== "";
             },
 
+            /** Activated whenever the activated property changes its value.
+             * Polymer listeners receive always as parameter the newValue and the oldValue
+             *
+             * @param newValue Boolean The new value set for activated
+             * @param oldValue Boolean The old value for activated
+             * */
             _handleActivate: function(newValue, oldValue){
-                if(oldValue !== undefined){
+                if(oldValue !== undefined){ // Avoids the first execution
                     if(this.activated){
                         Polymer.dom(this.$.container).setAttribute("active", "");
                     }else if(!this.activated){
