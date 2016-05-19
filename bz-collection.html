@@ -68,13 +68,6 @@
 
                 route: Object
             },
-            _handleActivation: function(e){
-                if(this.activeObject !== undefined){
-                    this.activeObject.activated = false;
-                }
-                this.activeObject = Polymer.dom(e).rootTarget;
-                this.set("route.path", "/" + e.target.title.toLocaleLowerCase());
-            },
 
             setAppActive: function(position) {
                 var app = Polymer.dom(this.root).querySelectorAll("bz-wrapper")[position];
@@ -83,9 +76,26 @@
 
             setAppActiveByName: function(name) {
                 this._searchItemMenuByName(name).click();
-
             },
 
+            /**
+             * @param e event received
+             * @private
+             */
+            _handleActivation: function(e){
+                if(this.activeObject !== undefined){
+                    this.activeObject.activated = false;
+                }
+                this.activeObject = Polymer.dom(e).rootTarget;
+                this.set("route.path", "/" + e.target.title.toLocaleLowerCase());
+            },
+
+            /**
+             * Search for the item in the collection that matches the name. (
+             * @param name
+             * @returns {T}
+             * @private
+             */
             _searchItemMenuByName(name){
                 var collection = Polymer.dom(this.root).querySelectorAll("bz-wrapper");
                 var targetElement = Array.prototype.filter.call(collection, function(element){
@@ -94,8 +104,6 @@
 
                 return targetElement;
             }
-
-
         })
     </script>
 </dom-module>
