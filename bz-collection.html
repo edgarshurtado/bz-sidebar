@@ -1,12 +1,22 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="./bz-wrapper.html">
-<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html">
 
+<!--
+    `bz-collection` is a scrollable menu that takes the full height of the port view.
+
+    For its correct function `<bz-collection>` needs to work with `<carbon-route>` to work as a SPA.
+
+    ### Styling
+    Custom Property | Description | Default Value
+    --------------- | ----------- | -------------
+    --menu-background | The background color all the menu will have | var(--menu-background, #435F7A)
+-->
 <dom-module id="bz-collection">
     <template>
         <style is="custom-style" include="iron-flex iron-flex-alignment iron-positioning">
 
             .scrollbar_hidder {
+            /*This class is for hidding the scrollbar*/
                 width: inherit;
                 overflow-x: hidden;
                 position: fixed;
@@ -30,6 +40,7 @@
            }
 
         </style>
+        <!-- DOM -->
         <div class="scrollbar_hidder">
             <div class="container">
                 <template id="appCollectionDom" is="dom-repeat" items="[[data]]">
@@ -43,18 +54,45 @@
             is: "bz-collection",
 
             properties:{
+                /**
+                 * Array of objects that store the name and icon url for each of the menu items. The object passed has
+                 * to have the keys *name* and *icon*
+                 * @type {Array<Object>}
+                 */
                 data: {
                     type: Array/Object,
                     reflectOnAttribute: true
                 },
+                /**
+                 * Helper property for keep track of which is the current active menu item
+                 * @type Object
+                 */
                 activeObject: {
                     type:Object,
                     value: undefined
                 },
-
+                /**
+                 * Property used as binding to the url route of the application. It receives the route object from
+                 * carboun-route in the element that contains the bz-collection.
+                 *
+                 * @param Object
+                 */
                 route: Object
             },
 
+            /**
+             * Method to mark a menu item , searching for the title of the app
+             * @param name
+             */
+            setAppActiveByName: function(name) {
+                this._searchItemMenuByName(name).click();
+            },
+
+            /**
+             * Fires every time a menu item is selected
+             * @param e event received
+             * @private
+             */
             _handleActivation: function(e){
                 if(this.activeObject !== undefined){
                     this.activeObject.activated = false;
@@ -63,9 +101,19 @@
                 this.set("route.path", "/" + e.target.title.toLocaleLowerCase());
             },
 
-            setAppActive: function(position) {
-                var app = Polymer.dom(this.root).querySelectorAll("bz-wrapper")[position];
-                app.click();
+            /**
+             * Searches for the item in the collection that matches its title property to the given name.
+             * @param name
+             * @returns {T}
+             * @private
+             */
+            _searchItemMenuByName(name){
+                var collection = Polymer.dom(this.root).querySelectorAll("bz-wrapper");
+                var targetElement = Array.prototype.filter.call(collection, function(element){
+                   return element.title.toLowerCase() === name.toLowerCase();
+                })[0];
+
+                return targetElement;
             }
         })
     </script>
